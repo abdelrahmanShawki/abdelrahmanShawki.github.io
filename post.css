@@ -1,0 +1,106 @@
+/* These are actual implementations of the foundations, components, 
+and patterns in specific types of pages. */
+
+
+@import url('compononts.css');
+@import url('foundations.css');
+
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 100px auto auto;
+    grid-template-areas:    "hd"
+                            "main"
+                            "ft";
+    
+}
+
+.main-container{
+    margin: 40px 0px;
+    grid-area: main;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px auto;
+
+;
+    
+    
+                      
+}
+
+.post-intro { 
+    display: grid;
+    grid-template-columns: repeat(9 , 120px);
+    grid-template-rows: repeat(7 , 50px);
+    grid-template-areas: "pt pt pt pt pt pt pt pt pt"
+                        "pt pt pt pt pt pt pt pt pt"
+                        "av an an an an an an an an"
+                        "av at at at at at at at at "
+                        "ab ab ab ab ab ab ab ab ab"
+                        "ab ab ab ab ab ab ab ab ab"
+                        "ab ab ab ab ab ab ab ab ab";
+
+    margin-bottom: 40px;
+    align-items: center;
+}
+
+
+.post-title {
+    grid-area: pt;
+    margin: 20px 0px;
+    height: auto;
+
+}
+.auther-avatar { 
+    grid-area: av;
+    width: 100px;
+    height: 100px;
+    
+}
+
+.auther-name { 
+    grid-area: an;
+
+}
+
+.auther-title { 
+    grid-area: at;
+    color: #0E8449;
+}
+.auther-bio { 
+    grid-area: ab;
+    width: 300px;
+    color: #017A9B;
+}
+
+.header-container  {
+    grid-area: hd;
+}
+
+
+
+
+.post { 
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.post img {
+    width: 80%;
+}
+
+.post-text { 
+    color: black;
+    line-height: 40px;
+    width: 90%;
+    font-size: 1.2em;
+    text-align: justify;
+}
+
+.footer-container { 
+    grid-area: ft;
+}
+
+
+

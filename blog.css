@@ -1,0 +1,88 @@
+/* These are actual implementations of the foundations, components, 
+and patterns in specific types of pages. */
+
+@import url('compononts.css');
+@import url('foundations.css');
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px auto auto;
+    grid-template-areas: "hd"
+                         "main"
+                         "ft";
+    
+}
+
+.header-container { 
+ grid-area: hd;
+ 
+}
+
+.Posts-container { 
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px 0px;
+   
+    
+}
+
+@media(min-width:600px) and (max-width:900px) {
+    .Posts-container { 
+        grid-area: main;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 20px 0px;
+
+
+
+    } 
+}
+
+@media(min-width:901px)  {
+    .Posts-container { 
+        grid-area: main;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 20px 0px;
+
+        
+    } 
+}
+
+.card {
+    width: 300px;
+    margin: 20px 0;;
+}
+
+@media(min-width: 600px) and (max-width:900px) { 
+    .card {
+        width: 300px;
+        margin: 20px 20px ;
+    }
+}
+
+@media(min-width: 600px) and (max-width:900px) { 
+    .card {
+        width: 300px;
+        margin: 20px 20px ;
+    }
+}
+
+.footer-container { 
+    grid-area: ft;
+}
+
+img { 
+    border-radius: 10px;
+    height: 300px;
+    width: 300px;
+}
+
