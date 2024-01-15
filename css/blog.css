@@ -5,14 +5,25 @@ and patterns in specific types of pages. */
 @import url('foundations.css');
 
 .container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 100px auto auto;
-    grid-template-areas: "hd"
-                         "main"
-                         "ft";
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     
 }
+
+@media(min-width:600px) {
+    .container {
+        display: flex;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px auto auto;
+        grid-template-areas: "hd"
+                             "main"
+                             "ft";
+        
+    }
+}
+
+
 
 .header-container { 
  grid-area: hd;

@@ -6,28 +6,40 @@ and patterns in specific types of pages. */
 @import url('foundations.css');
 
 .container {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 100px auto auto;
-    grid-template-areas:    "hd"
-                            "main"
-                            "ft";
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     
+}
+
+@media (min-width:600px) { 
+    .container {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 100px auto auto;
+        grid-template-areas:    "hd"
+                                "main"
+                                "ft";
+        
+    }
 }
 
 .main-container{
     margin: 40px 0px;
     grid-area: main;
-    display:grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 400px auto;
-
-;
-    
-    
+    display:flex;
+   flex-direction: column;
+   align-items: center;
                       
 }
 
+.post-intro { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*
 .post-intro { 
     display: grid;
     grid-template-columns: repeat(9 , 120px);
@@ -42,7 +54,16 @@ and patterns in specific types of pages. */
 
     margin-bottom: 40px;
     align-items: center;
-}
+} 
+
+.main-container{
+    margin: 40px 0px;
+    grid-area: main;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px auto;
+                      
+}*/
 
 
 .post-title {
